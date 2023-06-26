@@ -1,0 +1,99 @@
+body {
+  background-color: beige;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  margin: 20px 0;
+  display: inline-block;
+  position: relative;
+}
+
+.header:before {
+  content: '';
+  background-color: rgb(240, 255, 245);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 2px solid black;
+  border-radius: 20px;
+  animation: beat 1s infinite;
+  z-index: -1;
+}
+
+@keyframes beat {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.pro {
+  text-align: center;
+}
+
+
+
+.pro-container {
+  text-align: center;
+  display: flex;
+ 
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pro {
+  width: 250px;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid black;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  background-color: green;
+  scale: 1.1;
+  box-shadow: 40px 40px 30px rgba(0, 0, 0, 0.02);
+}
+
+.pro img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.shopping-cart-icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: white;
+  font-weight: 500;
+  color: green;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+.shopping-cart-icon:hover {
+  background-color: green;
+  color: white;
+  border: 1px solid green;
